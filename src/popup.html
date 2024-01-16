@@ -4,11 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha Extensão</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
-        <p>Ponto Tallos</p>
-        <p>Essa extensão serve para bater ponto na Tallos</p>
+  <div class="teste">
+        <div class="imgTallos">
+          <img src="https://kong.tallos.com.br:18000/images/tallos_new_logo.svg" alt="Logo">
+        </div>
+        <p>Extensão Ponto Tallos</p>
+        <p>Horário de entrada</p>
+        <input type="text" id="hstart" placeholder="08:00">
+        <p>Saída para o almoço</p>
+        <input type="text" id="lunchStart" placeholder="12:00">
+        <p>Chegada do almoço</p>
+        <input type="text" id="lunchEnd" placeholder="13:00">
+        <p>Horário de saída</p>
+        <input type="text" id="hend" placeholder="17:00">
+        <div class="btn-space">
+          <button id="btn">Atualizar Horários</button>
+        </div>
+        <p class="autor">Extensão criada por HF</p>
   </div>
   <script src="background.js"></script>
 </body>
