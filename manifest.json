@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "Ponto TALLOS",
+    "description": "Extensão para bater o ponto na TALLOS",
+    "browser_action": {
+      "default_title": "Ponto TALLOS",
+      "default_popup": "popup.html"
+    }
+  }
