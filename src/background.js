@@ -2,6 +2,18 @@ chrome.runtime.onInstalled.addListener(function() {
   alert("Extensão instalada.");
 });
 
+document.getElementById("btn").addEventListener("click", function() {
+  const entrada = document.getElementById("hstart").value;
+  const saidaAlmoco = document.getElementById("lunchStart").value;
+  const voltaAlmoco = document.getElementById("lunchEnd").value;
+  const saida = document.getElementById("hend").value;
+  localStorage.setItem('entrada', entrada);
+  localStorage.setItem('saidaAlmoco', saidaAlmoco);
+  localStorage.setItem('voltaAlmoco', voltaAlmoco);
+  localStorage.setItem('saida', saida);
+  alert("Horários salvos com sucesso!");
+});
+
 chrome.runtime.onStartup.addListener(function() {
   alert("Extensão iniciada com o navegador.");
   function verificarHora() {
@@ -22,5 +34,5 @@ chrome.runtime.onStartup.addListener(function() {
     } 
   }
 
-  setInterval(verificarHora, 60000);
+  setInterval(verificarHora, 1000);
 });
